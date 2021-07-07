@@ -11,13 +11,13 @@ import "google/protobuf/timestamp.proto";
 import "google/protobuf/duration.proto";
 import "google/protobuf/field_mask.proto";
 import "google/api/annotations.proto";
-import "protoc-gen-swagger/options/annotations.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
 import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 import "github.com/mwitkow/go-proto-validators/validator.proto";
 
 option go_package = "github.com/gogo/grpc-example/proto;example";
 
-option (grpc.gateway.protoc_gen_swagger.options.openapiv2_swagger) = {
+option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
   info: {
     version: "1.0";
   };

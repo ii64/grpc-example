@@ -15,7 +15,7 @@ import (
 	golang_proto "github.com/golang/protobuf/proto"
 	_ "github.com/gogo/protobuf/types"
 	_ "github.com/gogo/googleapis/google/api"
-	_ "github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger/options"
+	_ "github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/options"
 	_ "github.com/gogo/protobuf/gogoproto"
 	_ "github.com/mwitkow/go-proto-validators"
 	time "time"
@@ -31,7 +31,7 @@ var _ = time.Kitchen
 
 func (this *User) Validate() error {
 	if !(this.ID > 0) {
-		return github_com_mwitkow_go_proto_validators.FieldError("ID", fmt.Errorf(`ID must a positive integer`))
+		return github_com_mwitkow_go_proto_validators.FieldError("ID", fmt.Errorf(`ID must be a positive integer`))
 	}
 	if this.CreateDate != nil {
 		if err := github_com_mwitkow_go_proto_validators.CallValidatorIfExists(this.CreateDate); err != nil {
